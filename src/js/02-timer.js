@@ -23,14 +23,14 @@ flatpickr(pick, {
   defaultDate: new Date(),
   minuteIncrement: 1,
   onClose(selectedDates) {
-    let currentDate = new Date();
-    selectedByUser = selectedDates[0].getTime();
-    console.log(selectedDates[0]);
-    if (selectedByUser <= currentDate.getTime()) {
-      return alert("Please choose a date in the future");
-    } 
-    startBtn.disabled = false;
-    return selectedByUser;
+  let currentDate = new Date();
+  selectedByUser = selectedDates[0].getTime();
+  console.log(selectedDates[0]);
+  if (selectedByUser <= currentDate.getTime()) {
+    return alert("Please choose a date in the future");
+  } 
+  startBtn.disabled = false;
+  return selectedByUser;
   },
 });
 
